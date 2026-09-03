@@ -61,7 +61,7 @@ allDigits = [0 .. 9]
 
 -- Create a list of all possible features, starting at 0.
 allFeatures :: [Feature]
-allFeatures = undefined
+allFeatures = [0 .. 783]
 
 -- showPixelImage should take a PixelImage and turn it into a single string.
 -- Since we have lost gray colors (see readPixelImage in Framework.hs), our
@@ -74,7 +74,9 @@ allFeatures = undefined
 -- Example: showPixelImage [[True, True], [True, False]]
 --          "##\n# \n"
 showPixelImage :: PixelImage -> String
-showPixelImage img = undefined
+showPixelImage img = unlines [ showRow row | row <- img]
+    where 
+        showRow row = [if pixel then '#' else ' ' | pixel <- row]
 
 -- lookupVal takes a key of type a, an association list from a to b, and returns the hopefully
 -- unique value associated with the key. If lst contains the tuple (k, v), then 
@@ -89,7 +91,7 @@ showPixelImage img = undefined
 --          7
 lookupVal :: Eq a => a -> [(a, b)] -> b
 lookupVal key lst = 
-    undefined
+    head [v | (k, v) <- lst, k == key]
    
 --                                       Milestone Two
 
