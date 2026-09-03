@@ -11,6 +11,6 @@ The detailed description for this project can be found on the [course webpage](h
 * Monday 9/11 - Project submission deadline. 
 * Wednesday 9/13 - Late submission deadline. 
 
-Student Name:
-Trinity ID: 
+Student Name: Lance Eader
+Trinity ID: 1000209
 
