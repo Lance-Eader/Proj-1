@@ -56,7 +56,7 @@ outOf a b =  (fromIntegral a) % (fromIntegral b)
 
 -- Create a list of all possible digit labels. 
 allDigits :: [Digit]
-allDigits = undefined
+allDigits = [0 .. 9]
 
 
 -- Create a list of all possible features, starting at 0.
